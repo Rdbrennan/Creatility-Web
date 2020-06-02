@@ -1,0 +1,293 @@
+@media(min-width:1400px) {
+    .navbar-default {
+      z-index: 5;
+      padding: 25px 0;
+      border: 0;
+      background-color: rgb(76, 170, 171);
+      transition: padding .3s;
+    }
+
+    .navbar-default .navbar-brand {
+      color: rgb(76, 170, 171);
+      transition: all .3s;
+    }
+
+   .navbar-default .navbar-nav>.active>a {
+      font-family: 'Pacifico', cursive;
+      border-radius: 3px;
+      background-color: #4caaab;
+    }
+
+    /*header style*/
+    .navbar-default.navbar-shrink {
+      font-family: 'Proxima Nova', bold;
+      padding: 10px 0;
+      background-color: #4caaab;
+    }
+
+    /*logo style*/
+    .navbar-default.navbar-shrink .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      position: absolute;
+      font-size: 2em;
+      color: rgb(247, 251, 113);
+      background-color: #4caaab;
+    }
+    nav.navbar .navbar-default .navbar-fixed-top .navbar-shrink::before{
+      background-color: #285696;
+    }
+}
+
+/*styling for shrunken menu*/
+.navbar-default {
+  border-color: #4caaab;
+}
+.navbar-default.navbar-shrink .navbar-brand {
+  position: absolute;
+  font-family: 'Pacifico', cursive;
+  left: 0;
+  top:0;
+  margin-left: 25px;
+  margin-top: 10px;
+  font-size: 25px;
+  color: rgb(247, 251, 113);
+  background-color: #295596;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Proxima Nova', bold;
+  color: rgb(247, 251, 113);
+  background-color: #4caaab;
+}
+.navbar-default .navbar-brand :hover{
+  color: rgb(247, 251, 113);
+}
+.container{
+  background-color: rgb(76, 170, 171);
+}
+
+nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink{
+  background-color: #285696;
+  height: 70px;
+}
+
+/*________________________________________________
+    Header Styling Menu Icon & Dropdown Menu   ;*/
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: #132e54;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.overlay li {
+  padding: 8px;
+  font-family: sans-serif;
+  font-kerning: initial;
+  text-decoration: none;
+  font-size: 4.7vw;
+  font-weight: 700;
+  display: block;
+  margin:0 0 -10px 0;
+  transition: 0.3s;
+}
+
+.overlay a{
+  text-decoration: none;
+}
+
+.product{
+  color: #EFFF2B;
+}
+.product:hover, .product:focus{
+  opacity: 0.7;
+}
+.client{
+  color: #B22921;
+}
+.client:hover, .client:focus{
+  opacity: 0.7;
+}
+.about{
+  color: #FF2216;
+}
+.about:hover, .about:focus{
+  opacity: 0.7;
+}
+.contact{
+  color: #267CCC;
+}
+.contact:hover, .contact:focus{
+  opacity: 0.7;
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*_____________________________
+          Hamburger
+_____________________________*/
+
+.menu {
+  z-index: 3;
+  -webkit-filter: url("#shadowed-goo");
+          filter: url("#shadowed-goo");
+}
+
+.menu-item, .menu-open-button {
+  position: fixed;
+  z-index: 5;
+  background-color: transparent;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  left: 90%;
+  top: 10px;
+  margin-left: 0;
+  padding-top: 20px;
+  padding-left: 40px;
+  text-align: center;
+  line-height: 80px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform ease-out 200ms;
+          transition: transform ease-out 200ms;
+}
+
+.menu-open {
+  display: none;
+}
+
+.hamburger {
+  z-index: 5;
+  width: 25px;
+  height: 2px;
+  background: rgb(247, 251, 113);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  -webkit-transition: -webkit-transform 350ms;
+  transition: transform 600ms;
+}
+
+.hamburger-1 {
+  z-index: 5;
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  z-index: 3;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  z-index: 3;
+  -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu-open-button {
+  z-index: 5;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
+/* line 28, ../styles/_normalize.sass */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  overflow-x:scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+
+/* For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats. */
+/* line 6, ../styles/style.sass */
+html, body{
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: scroll;
+}
+
+
+/* line 31, ../styles/style.sass */
+header {
+  height: 100px;
+}

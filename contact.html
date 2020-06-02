@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creatility, Inc.</title>
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/home.css">
+  </head>
+<body>
+  <!-- Menu Header Toggle Shrinking -->
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <!-- change href to home page once finished-->
+                <a class="navbar-brand" href="index.html"><b>Creatility</b></a>
+                <div id="myNav" class="overlay">
+                  <div class="overlay-content">
+                    <a href="product.html" onclick="closeNav()"><li class="product">Technologies</li></a>
+                    <a href="mission.html" onclick="closeNav()"><li class= "about">Mission</li></a>
+                    <a href="team.html" onclick="closeNav()"><li class= "client">Team</li></a>
+                    <a href="contact.html" onclick="closeNav()"><li class= "contact">Contact</li></a>
+                    <a href="inspiration.html" onclick="closeNav()"><li class= "inspiration">Inspiration</li></a>
+                  </div>
+              <nav class="menu">
+                <input type="checkbox" href="#" class="menu-open" name="menu-open" onclick="toggleNav()" id="menu-open"/>
+                <label class="menu-open-button" for="menu-open">
+                    <span class="hamburger hamburger-1"></span>
+                    <span class="hamburger hamburger-2"></span>
+                    <span class="hamburger hamburger-3"></span>
+                </label>
+              </nav>
+              </div>
+            </div>
+          </div>
+    </nav>
+
+
+    <!-- scripts -->
+    <script src="scripts/transition.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+
+  </body>
+</html>

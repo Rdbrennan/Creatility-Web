@@ -1,0 +1,456 @@
+@font-face {
+  font-family: 'sofiaprobold';
+    src: url('../webfonts/SofiaPro-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'sofiaprolight';
+    src: url('../webfonts/sofiapro-light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*________________________________________________
+          header styling shrinkage and Logo*/
+@media(min-width:768px) {
+    .navbar-default {
+        z-index: 5;
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-default .navbar-brand {
+        color: #828282;
+        font-size: 2em;
+        background-color: transparent;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-default .navbar-nav>.active>a {
+        font-family: sofiaprobold;
+        border-radius: 3px;
+        background-color: transparent;
+    }
+
+    /*header style*/
+    .navbar-default.navbar-shrink {
+      /* font-family: 'Pacifico', cursive; */
+        padding: 10px 0;
+        background-color: transparent;
+    }
+
+    /*logo style*/
+    .navbar-default.navbar-shrink .navbar-brand {
+      /* font-family: 'Pacifico', cursive; */
+        font-size: 2.3vw;
+        color: rgb(247, 251, 113);
+        background-color: transparent;
+    }
+}
+
+/*_____________________________
+styling for shrunken menu*/
+.navbar-default {
+  border-color: transparent;
+  background-color: transparent;
+}
+/*Logo*/
+
+.navbar-default.navbar-shrink .navbar-brand {
+  position: absolute;
+  font-family: sofiaprobold;
+  left: 0;
+  top:0;
+  margin-left: 50px;
+  margin-top: 10px;
+  color: rgb(247, 251, 113);
+  background-color: transparent;
+}
+.navbar-default .navbar-brand {
+  font-family: sofiaprobold;
+  color: rgb(247, 251, 113);
+  background-color: transparent;
+}
+.container{
+  background-color: transparent;
+}
+
+.navbar .navbar-default .navbar-fixed-top .navbar-shrink{
+  background-color: transparent;
+}
+
+
+
+/*________________________________________________
+    Header Styling Menu Icon & Dropdown Menu   ;*/
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: #132e54;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.overlay li {
+  padding: 8px;
+  font-family: sans-serif;
+  font-kerning: initial;
+  text-decoration: none;
+  font-size: 4.0vw;
+  font-weight: 700;
+  display: block;
+  margin:0 0 -10px 0;
+  transition: 0.3s;
+}
+.overlay a{
+  text-decoration: none;
+}
+
+.product{
+  color: #EFFF2B;
+}
+.product:hover, .product:focus{
+  opacity: 0.7;
+}
+.client{
+  color: #B22921;
+}
+.client:hover, .client:focus{
+  opacity: 0.7;
+}
+.about{
+  color: #FF2216;
+}
+.about:hover, .about:focus{
+  opacity: 0.7;
+}
+.contact{
+  color: #267CCC;
+}
+.contact:hover, .contact:focus{
+  opacity: 0.7;
+}
+.inspiration{
+  color: white;
+  opacity: 0.8;
+}
+.inspiration:hover, .inspiration:focus{
+  opacity: 0.7;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/*_____________________________
+          Hamburger
+_____________________________*/
+
+.menu {
+  z-index: 3;
+}
+
+.menu-open-button {
+  position: fixed;
+  z-index: 1;
+  background-color: transparent;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  left: 90%;
+  top: 10px;
+  margin-left: 0;
+  padding-top: 20px;
+  padding-left: 40px;
+  text-align: center;
+  line-height: 80px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform ease-out 200ms;
+          transition: transform ease-out 200ms;
+          transition: width 2s;
+}
+
+.menu-open {
+  display: none;
+  transition: width 2s;
+
+}
+
+.hamburger {
+  z-index: 3;
+  height: 2px;
+  width: 25px;
+  background: rgb(247, 251, 113);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  -webkit-transition: -webkit-transform 350ms;
+          transition: transform 600ms;
+}
+
+.hamburger-1 {
+  z-index: 3;
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+  z-index: 3;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+  z-index: 3;
+  -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+}
+
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu-open-button {
+  z-index: 3;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+
+/*________________________________________________
+          Content/Background Styling
+  ________________________________________________*/
+
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  font-family: sofiaprobold;
+  /* background: radial-gradient(ellipse at center,#2b2e35 0%,rgba(15, 19, 29, 1) 80%); */
+  background: rgba(15, 19, 29, 1);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+body{
+  position: relative;
+  background-size:contain;
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+	/* padding-top: 10%; */
+	padding-bottom: 10%;
+}
+
+.slogan{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15;
+  font-family: sofiaprolight;
+  font-size: 3em;
+  letter-spacing: 0.21em;
+  color: white;
+  opacity: 0.7;
+}
+
+/* ---- particles.js container ---- */
+
+.particlecontainer{
+  margin-top: 8%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* width: 80vw; */
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center,#2b2e35 0%,rgba(15, 19, 29, 1) 80%);
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#Grid{
+  margin-bottom: 40px;
+  text-align: justify;
+  font-size: 0.1px;
+  margin-left: 0;
+  margin-left: 5%;
+}
+
+#Grid li{
+  display: inline-block;
+  background: #121723;
+  width: 20%;
+  padding-top: 23%; /* Used instead of height to give elements fluid, width-based height */
+  margin-top: 10%;
+  margin-left: 3%;
+}
+#Grid li:hover{
+  background: #3f7fda;
+}
+/* #Grid li:nth-child(1){
+
+  background: url(../Img/high-res-outline-big.png) no-repeat;
+  background-size: contain;
+}
+#Grid li:nth-child(2){
+
+  background: url(../Img/subly.png) no-repeat;
+  background-size: contain;
+} */
+
+/*#Grid li:nth-child(3){
+
+  background: url(../Img/flappy@2x.png.png) no-repeat;
+}
+#Grid li:nth-child(4){
+
+  background: url(../Img/Settings_2x.png.png) no-repeat;
+} */
+
+/* #Grid:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  border-top: 10px dashed #922d8d; /* Border added to make element visible for demonstration purposes */
+} */
+
+/* #Grid .placeholder{
+  padding: 0;
+  border-top: 10px solid #922d8d; /* Border added to make element visible for demonstration purposes */
+} */
+
+/* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
+
+/* 3 COL */
+
+@media (max-width: 800px){
+  #Grid li{
+    width: 31%;
+    padding-top: 31%;
+    margin-bottom: 3%;
+  }
+}
+
+/* 2 COL */
+
+@media (max-width: 600px){
+  #Grid li{
+    width: 30%;
+    padding-top: 48%;
+    margin-bottom: 4%;
+    margin-top: 10%;
+  }
+}
+
+/* SINGLE COL */
+
+@media (max-width: 400px){
+  #Grid li{
+    width: 70%;
+    padding-top: 70%;
+    margin-bottom: 5%;
+    margin-top: 50%;
+  }
+}
+
+.app1{
+  height: 85px;
+  min-width: 85px;
+  white-space: nowrap;
+  background: url(../Img/subly.png) no-repeat;
+  background-size: 100%;
+  border-radius: 15px;
+  border: none;
+}
+.app1:focus{
+  outline:0;
+}
+.app1:hover{
+  transform: translateY(-0.25em);
+  }
+.app1logo{
+  white-space: nowrap;
+  font-size: 12px;
+  color: lightgray;
+  white-space: nowrap;
+}
