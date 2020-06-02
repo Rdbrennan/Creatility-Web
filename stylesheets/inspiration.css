@@ -54,10 +54,21 @@ CSS Indexing
 
 .navbar-fixed-top.scrolled {
   background-color: #fff !important;
-  transition: background-color 100ms linear;
+  transition: background-color 0.5s linear;
   position: fixed;
-  color: black;
+
 }
+
+.navbar-fixed-top .navbar-brand.scrolled {
+  transition: background-color 0.5s linear;
+  color: #000000 !important;
+}
+
+.navbar-fixed-top .menu-open-button.scrolled .hamburger {
+  background-color: #000000 !important;
+  transition: background-color 0.5s linear;
+}
+
 
 .navbar-fixed-top.scrolled .nav-link {
   color:#555;
@@ -94,7 +105,7 @@ CSS Indexing
     /*header style*/
     .navbar-default.navbar-shrink {
       /* font-family: 'Pacifico', cursive; */
-        padding: 10px 0;
+        padding: 33px 0;
         background-color: transparent;
     }
 
@@ -113,6 +124,7 @@ styling for shrunken menu*/
 .navbar-default {
   border-color: transparent;
   background-color: transparent;
+  transition: background-color 0.2s linear;
 }
 /*Logo*/
 
@@ -137,6 +149,8 @@ styling for shrunken menu*/
 
 .navbar .navbar-default .navbar-fixed-top .navbar-shrink{
   background-color: transparent;
+  transition: background-color 1s linear;
+
 }
 
 /*________________________________________________
@@ -510,7 +524,7 @@ a:hover {
 }
 
 .title h2 a:hover {
-  color: inherit !important;
+  color: rgb(247, 251, 113);
   opacity: 0.8;
 }
 
@@ -606,7 +620,7 @@ a:hover {
 }
 
 .post-meta p a:hover {
-  color: rgb(247, 251, 113);
+  /* color: rgb(247, 251, 113); */
 }
 
 .name {
@@ -1522,7 +1536,7 @@ a:hover {
 }
 
 .main-content-area .blog-wrapper .post-details a:hover {
-  color: rgb(247, 251, 113);
+  /* color: rgb(247, 251, 113); */
 }
 
 .main-content-area .single-column {
@@ -2045,8 +2059,9 @@ blockquote:before {
   color: #c3c3c3;
 }
 
+
 .home-dark .title h2 a:hover {
-  color: #fff !important;
+  color: rgb(247, 251, 113);
 }
 
 .home-dark h1,
@@ -2076,7 +2091,7 @@ blockquote:before {
 }
 
 .home-dark .author-des p a:hover {
-  color: rgb(247, 251, 113);
+  /* color: rgb(247, 251, 113); */
 }
 
 .home-dark .post-meta a {
@@ -2084,7 +2099,7 @@ blockquote:before {
 }
 
 .home-dark .post-meta a:hover {
-  color: rgb(247, 251, 113);
+  /* color: rgb(247, 251, 113); */
 }
 
 .home-dark .footer-area {

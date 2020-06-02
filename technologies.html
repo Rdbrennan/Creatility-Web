@@ -3,38 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Creatility, Inc.</title>
+
+    <!-- Product Links -->
     <link rel="icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-          charset="utf-8"></script>
-          <link rel="shortcut icon" type="image/png" href="assets/">
-          <!-- Bootstrap CSS -->
-          <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-          <!--Owlcarousel CSS -->
-          <link rel="stylesheet" href="assets/owl.carousel.min.css" />
-          <!--Responsive Menu  CSS -->
-          <link rel="stylesheet" href="assets/responsive-menu.css" />
-          <!-- Font awesome CSS -->
-          <link rel="stylesheet" href="assets/fontawesome-all.min.css">
-          <!-- Animate CSS -->
-          <link rel="stylesheet" href="assets/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link id='myStyle' rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 
-          <!-- Main CSS -->
-          <!-- <link rel="stylesheet" href="stylesheets/inspiration.css"> -->
-          <!-- Google font -->
-          <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600i,700" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheets/product.css">
+    <!-- Transition Links -->
+
+    <!-- <link rel="shortcut icon" type="image/png" href="assets/">
+    <link rel="stylesheet" href="stylesheets/fake.css">
+    <link rel="stylesheet" href="assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/responsive-menu.css" />
+    <link rel="stylesheet" href="assets/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/animate.css"> -->
+
+    <link rel="stylesheet" href="stylesheets/technologies.css">
   </head>
+
   <body>
     <!-- Menu Header Toggle Shrinking -->
     <header>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
             <div class="container">
                 <div class="navbar-header page-scroll">
                     <a id = "Home" class="navbar-brand" href="index.html"><b>Creatility</b></a>
                     <div id="myNav" class="overlay">
                       <div class="overlay-content">
-                        <a id = "Product" href="product.html" onclick="closeNav()"><li class="product">Technologies</li></a>
+                        <a id = "Product" href="technologies.html" onclick="closeNav()"><li class="product">Technologies</li></a>
                         <a id = "Mission" href="mission.html" onclick="closeNav()"><li class= "about">Mission</li></a>
                         <a id = "Team" href="team.html" onclick="closeNav()"><li class= "client">Team</li></a>
                         <a id = "Contact" href="contact.html" onclick="closeNav()"><li class= "contact">Contact</li></a>
@@ -53,6 +52,8 @@
               </div>
         </nav>
       </header>
+
+    <!-- Reloaded Section -->
     <section>
       <ul id="Grid">
         <a href="https://itunes.apple.com/us/app/white-fox-your-ride-in-nyc/id1418665502?mt=8"><li style="background: url(../Img/high-res-outline-big.png) no-repeat;
@@ -65,10 +66,12 @@
      background-size: contain;"></li></a>
 
       </ul>
-      <script src="scripts/product.js" charset="utf-8"></script>
   </section>
 
+  <!-- Scripts -->
+    <script src="scripts/main.js" charset="utf-8"></script>
     <script src="scripts/transition.js"></script>
     <script src="scripts/jquery-3.3.1.min.js"></script>
+
   </body>
 </html>

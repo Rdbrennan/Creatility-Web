@@ -19,9 +19,9 @@
 /*_________________________________
       Menu Cicle Animation
 *_________________________________*/
-$('a').each(function(){
-  $(this).html('<span class="icon">'+ $(this).html() +'</span><span class="circle"><span><em></em></span><span><em></em></span></span>');
-});
+// $('a').each(function(){
+//   $(this).html('<span class="icon">'+ $(this).html() +'</span><span class="circle"><span><em></em></span><span><em></em></span></span>');
+// });
 
 
 /*_________________________________

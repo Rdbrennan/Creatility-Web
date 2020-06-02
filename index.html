@@ -5,10 +5,10 @@
     <title>Creatility, Inc.</title>
     <link rel="icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="stylesheets/home.css">
     <link rel="stylesheet" href="stylesheets/loading.css">
   </head>
@@ -43,7 +43,7 @@
                   <a id = "Home" class="navbar-brand" href="index.html"><b>Creatility</b></a>
                   <div id="myNav" class="overlay">
                     <div class="overlay-content">
-                      <a id = "Product" href="product.html" onclick="closeNav()"><li class="product">Technologies</li></a>
+                      <a id = "Product" href="technologies.html" onclick="closeNav()"><li class="product">Technologies</li></a>
                       <a id = "Mission" href="mission.html" onclick="closeNav()"><li class= "about">Mission</li></a>
                       <a id = "Team" href="team.html" onclick="closeNav()"><li class= "client">Team</li></a>
                       <a id = "Contact" href="contact.html" onclick="closeNav()"><li class= "contact">Contact</li></a>
@@ -62,21 +62,21 @@
             </div>
       </nav>
     </header>
+
     <!-- ======================== PARTICLE ANIMATION ====================================== -->
+    <!-- Reloaded Section -->
     <section>
       <div class="particlecontainer">
-
-      <div class="slogan">
-        Innovation Shaped by Insight
+        <div class="slogan">Innovation Shaped by Insight</div>
+        <div id="particles-js"></div>
       </div>
-      <div id="particles-js"></div>
-      </div>
-
-    <!-- scripts -->
+    <!-- These 2 scripts need to be in the section in order to reload Particles  -->
     <script src="scripts/particles.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/main.js" charset="utf-8"></script>
   </section>
+
+  <!-- scripts -->
+  <script src="scripts/main.js" charset="utf-8"></script>
   <script src="scripts/transition.js"></script>
   <script src="scripts/jquery-3.3.1.min.js"></script>
 
