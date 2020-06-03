@@ -34,6 +34,11 @@ function toggleNav() {
 $(function () {
   $(document).scroll(function () {
 	  var $nav = $(".navbar-fixed-top");
+    var $nav1 = $(".navbar-fixed-top .navbar-brand");
+    var $nav2 = $(".navbar-fixed-top .menu-open-button");
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $nav1.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $nav2.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+
 	});
 });
