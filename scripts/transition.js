@@ -1,19 +1,68 @@
-$('#Inspiration').off("click").on("click", function (event) {
-  event.preventDefault()
+var previousWindow = "";
 
-  const href = $(this).attr("href")
+$('#Inspiration').off("click").on("click", function (event) {
+    sendToInspiration()
+})
+
+$('#Product').off("click").on("click", function (event) {
+    sendToTechnology()
+})
+
+$('#Home').off("click").on("click", function (event) {
+    sendToHome()
+})
+
+function sendToHome() {
+  previousWindow = window.location.href;
+  event.preventDefault()
+  const href = ("index.html")
+  window.history.pushState(null, null, href)
+  $.ajax({
+    url: href,
+    success: function (data) {
+
+      $("section").fadeOut(250, function () {
+        const newPage = $(data).filter("section").html()
+        $('link[href="stylesheets/technologies.css"]').attr('href','stylesheets/home.css');
+        $('link[href="stylesheets/inspiration.css"]').attr('href','stylesheets/home.css');
+        $("section").html(newPage);
+        $("section").fadeIn(500);
+      })
+    }
+  })
+}
+
+function sendToTechnology() {
+  previousWindow = window.location.href;
+  event.preventDefault()
+  const href = ("technologies.html")
+  window.history.pushState(null, null, href)
+  $.ajax({
+    url: href,
+    success: function (data) {
+
+      $("section").fadeOut(250, function () {
+        const newPage = $(data).filter("section").html()
+        $('link[href="stylesheets/inspiration.css"]').attr('href','stylesheets/technologies.css');
+        $('link[href="stylesheets/home.css"]').attr('href','stylesheets/technologies.css');
+        $("section").html(newPage);
+        $("section").fadeIn(500);
+      })
+    }
+  })
+}
+
+function sendToInspiration() {
+  previousWindow = window.location.href;
+  event.preventDefault()
+  const href = ("inspiration.html")
 
   window.history.pushState(null, null, href)
-
   $.ajax({
     url: href,
     success: function (data) {
       $("section").fadeOut(250, function () {
         const newPage = $(data).filter("section").html()
-        // $('link[href="https://fonts.googleapis.com/css?family=Pacifico"]').attr('href','stylesheets/fake.css');
-        // $('link[href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"]').attr('href','stylesheets/fake.css');
-        // $('link[href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"]').attr('href','stylesheets/fake.css');
-        // $('link[href="stylesheets/fake.css"]').attr('href','stylesheets/bootstrap.min.css');
         $('link[href="stylesheets/technologies.css"]').attr('href','stylesheets/inspiration.css');
         $('link[href="stylesheets/home.css"]').attr('href','stylesheets/inspiration.css');
         $("section").html(newPage);
@@ -21,51 +70,30 @@ $('#Inspiration').off("click").on("click", function (event) {
       })
     }
   })
-})
+}
 
-$('#Product').off("click").on("click", function (event) {
-  event.preventDefault()
 
-  const href = $(this).attr("href")
 
-  window.history.pushState(null, null, href)
+document.onmouseover = function() {
+    //User's mouse is inside the page.
+    window.innerDocClick = true;
+}
 
-  $.ajax({
-    url: href,
-    success: function (data) {
+document.onmouseleave = function() {
+    //User's mouse has left the page.
+    window.innerDocClick = false;
+}
+window.addEventListener('popstate', function(event) {
+    // The popstate event is fired each time when the current history entry changes.
 
-      $("section").fadeOut(250, function () {
-        const newPage = $(data).filter("section").html()
+    alert(previousWindow)
 
-        $("section").html(newPage);
-        $("section").fadeIn(500);
-        // $('link[href="stylesheets/bootstrap.min.css"]').attr('href','stylesheets/fake.css');
-        $('link[href="stylesheets/inspiration.css"]').attr('href','stylesheets/technologies.css');
-        $('link[href="stylesheets/home.css"]').attr('href','stylesheets/technologies.css');
-      })
-    }
-  })
-})
+      if (previousWindow == "http://localhost:3000/index.html"){
+        sendToHome()
+      } else if (previousWindow == "http://localhost:3000/technologies.html"){
+        sendToTechnology()
+      } else if (previousWindow == "http://localhost:3000/inspiration.html"){
+        sendToInspiration()
+      }
 
-$('#Home').off("click").on("click", function (event) {
-  event.preventDefault()
-
-  const href = $(this).attr("href")
-
-  window.history.pushState(null, null, href)
-
-  $.ajax({
-    url: href,
-    success: function (data) {
-
-      $("section").fadeOut(250, function () {
-        const newPage = $(data).filter("section").html()
-
-        $("section").html(newPage);
-        $("section").fadeIn(500);
-        $('link[href="stylesheets/technologies.css"]').attr('href','stylesheets/home.css');
-        $('link[href="stylesheets/inspiration.css"]').attr('href','stylesheets/home.css');
-      })
-    }
-  })
-})
+}, false);

@@ -427,7 +427,7 @@ a:hover {
 }
 
 .mb-50 {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .preloader {
@@ -590,6 +590,17 @@ a:hover {
   right: 0;
 }
 .post-meta .border-line1 {
+  position: absolute;
+  top: 12px;
+  width: 70px;
+  background: rgb(247, 251, 113);
+  height: 1px;
+  content: "";
+  left: 97px;
+  right: 0;
+}
+
+.post-meta .border-line2 {
   position: absolute;
   top: 12px;
   width: 70px;
