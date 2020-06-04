@@ -20,7 +20,7 @@ body{
   width: 100vw;
   z-index: 1031;
   position: absolute;
-  animation: removeanimation 1s 1 6.3s;
+  animation: removeanimation 1s 1 6.2s;
   animation-fill-mode: forwards;
 
 }
