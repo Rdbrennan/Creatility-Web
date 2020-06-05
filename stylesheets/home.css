@@ -214,8 +214,8 @@ _____________________________*/
 
 .hamburger {
   z-index: 3;
-  height: 2px;
-  width: 25px;
+  height: 1px;
+  width: 23px;
   background: rgb(247, 251, 113);
   display: block;
   position: absolute;
@@ -224,7 +224,7 @@ _____________________________*/
   margin-left: -12.5px;
   margin-top: -1.5px;
   -webkit-transition: -webkit-transform 350ms;
-          transition: transform 600ms;
+          transition: transform 300ms;
 }
 
 .hamburger-1 {
@@ -241,8 +241,29 @@ _____________________________*/
 
 .hamburger-3 {
   z-index: 3;
-  -webkit-transform: translate3d(0, 8px, 0);
-          transform: translate3d(0, 8px, 0);
+  -webkit-transform: translate3d(0, 4px, 0);
+          transform: translate3d(0, 4px, 0);
+}
+
+.menu-open-button {
+  z-index: 3;
+  transition: transform .2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover .hamburger-1 {
+  -webkit-transform: translate(0, -11px);
+  transform: translate(0, -11px);
+}
+.menu-open-button:hover .hamburger-3 {
+  -webkit-transform: translate(0, 7px);
+  transform: translate(0, 7px);
 }
 
 
@@ -258,30 +279,25 @@ _____________________________*/
   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
           transform: translate3d(0, 0, 0) rotate(-45deg);
 }
-
-.menu-open-button {
-  z-index: 3;
-  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
-  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-  cursor: pointer;
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
 }
-
-.menu-open-button:hover {
-  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-}
-
 .menu-open:checked + .menu-open-button {
-  -webkit-transition-timing-function: linear;
+  transform: transform 600ms;
+}
+
+.menu-open:checked + .menu-open-button:hover {
+  transform: translate3d(0, 0, 0) rotate(90deg);
+  transform: transform 600ms;
+
+  /* transform: transform 600ms; */
+  /* -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
   -webkit-transition-duration: 100ms;
           transition-duration: 100ms;
   -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0); */
 }
 
 
