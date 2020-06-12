@@ -25,7 +25,7 @@ body{
 
 }
 .tophalf{
-  background-color: #337ab7;
+  background-color: #0f131d;
   z-index: 2;
   top: 0%;
   height: 50vh;
@@ -35,7 +35,7 @@ body{
   animation-fill-mode: forwards;
 }
 .bottomhalf{
-  background-color: #337ab7;
+  background-color: #0f131d;
   top: 50%;
   z-index: 2;
   height: 50vh;
